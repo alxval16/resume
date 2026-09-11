@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Валерия Алексеева</title>
+  <meta name="description" content="Резюме SMM-редактора Валерии Алексеевой: опыт, образование и интересы.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d2cff'/%3E%3Cpath d='M18 17h28v7H26v8h17v7H26v8h20v7H18z' fill='white'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --ink: #11131a;
+      --muted: #626779;
+      --accent: #1d2cff;
+      --paper: #f4f5f8;
+      --line: #d8dae3;
+      --white: #fff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      width: min(1180px, calc(100% - 40px));
+      margin: 20px auto;
+      background: var(--white);
+      border: 1px solid var(--line);
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr);
+      min-height: 680px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .intro__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: clamp(32px, 7vw, 88px);
+    }
+
+    .eyebrow {
+      margin: 0 0 24px;
+      color: var(--accent);
+      font-size: 15px;
+      font-weight: 750;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(58px, 9vw, 132px);
+      font-weight: 800;
+      letter-spacing: -.075em;
+      line-height: .82;
+    }
+
+    .lead {
+      max-width: 700px;
+      margin: 48px 0 0;
+      font-size: clamp(22px, 2.5vw, 34px);
+      line-height: 1.18;
+    }
+
+    .intro__photo {
+      position: relative;
+      min-height: 460px;
+      overflow: hidden;
+      color: var(--white);
+      background: var(--accent);
+    }
+
+    .intro__photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%);
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 32px 72px;
+      padding: clamp(32px, 7vw, 88px);
+    }
+
+    .section-title {
+      margin: 0;
+      color: var(--accent);
+      font-size: 15px;
+      font-weight: 750;
+      letter-spacing: .08em;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+
+    .section-body {
+      padding-bottom: 64px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .content > :nth-last-child(-n + 2) {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .job + .job { margin-top: 46px; }
+
+    .job__head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: baseline;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(28px, 3vw, 42px);
+      letter-spacing: -.035em;
+      line-height: 1.08;
+    }
+
+    .period {
+      margin: 0;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .job p,
+    .education p { max-width: 760px; }
+
+    .education-list {
+      display: grid;
+      gap: 26px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .education-list h2 {
+      margin-bottom: 4px;
+      font-size: clamp(22px, 2vw, 28px);
+      line-height: 1.2;
+    }
+
+    .education-list p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .job p:last-child,
+    .education p:last-child { margin-bottom: 0; }
+
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 24px;
+      padding: 28px clamp(32px, 7vw, 88px);
+      color: var(--white);
+      background: var(--ink);
+    }
+
+    .contacts a {
+      color: var(--white);
+      text-decoration-color: color-mix(in srgb, var(--white) 55%, transparent);
+      text-underline-offset: .2em;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: 100%;
+        margin: 0;
+        border: 0;
+      }
+
+      .intro { grid-template-columns: 1fr; }
+      .intro__text { min-height: 520px; }
+      .intro__photo { min-height: 480px; }
+
+      .content {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .section-title:not(:first-child) { margin-top: 30px; }
+      .section-body { padding-bottom: 46px; }
+
+      .content > :nth-last-child(-n + 2) {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+
+      .job__head { grid-template-columns: 1fr; gap: 4px; }
+
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="intro">
+      <div class="intro__text">
+        <div>
+          <p class="eyebrow">SMM-редактор</p>
+          <h1>Валерия<br>Алексеева</h1>
+        </div>
+        <p class="lead">Помогаю брендам понятно общаться с аудиторией. Пишу и редактирую тексты, планирую контент и организую его выпуск.</p>
+      </div>
+      <div class="intro__photo">
+        <img src="assets/valeria-alekseeva.jpeg" alt="Валерия Алексеева" width="1278" height="1280">
+      </div>
+    </header>
+
+    <div class="content">
+      <h2 class="section-title">Опыт работы</h2>
+      <section class="section-body" aria-label="Опыт работы">
+        <article class="job">
+          <div class="job__head">
+            <h2>SMM-редактор, PortalBilet</h2>
+            <p class="period">2025—н. в.</p>
+          </div>
+          <p>Запускаю соцсети бренда. Формирую коммуникацию с аудиторией, составляю контент-план, пишу и редактирую тексты, координирую работу SMM-команды.</p>
+        </article>
+        <article class="job">
+          <div class="job__head">
+            <h2>Контент-редактор, «Лента»</h2>
+            <p class="period">2019—2022</p>
+          </div>
+          <p>Готовила контент для промоматериалов и приложения «Лента Онлайн», участвовала в создании редполитики и гайдлайнов, организовывала фотосессии, работала в связке с дизайнерами и фотографами.</p>
+        </article>
+      </section>
+
+      <h2 class="section-title">Образование</h2>
+      <section class="section-body education" aria-label="Образование">
+        <ul class="education-list">
+          <li><h2>Кубанский государственный университет, Издательское дело</h2></li>
+          <li><h2>Школа редакторов Бюро Горбунова, 1-я ступень</h2></li>
+        </ul>
+      </section>
+
+    </div>
+
+    <footer class="contacts">
+      <span>Мои контакты:</span>
+      <a href="https://t.me/leverle" rel="me">Tg @leverle</a>
+    </footer>
+  </main>
+</body>
+</html>
